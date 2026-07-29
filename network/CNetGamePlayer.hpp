@@ -59,8 +59,7 @@ public:
     char unk_02B0; //0x02B0
     char pad_02B1[3]; //0x02B1
     uint32_t unk_02B4; //0x02B4
-    uint32_t m_account_id; //0x02B4
-    uint32_t m_unk_02BC; //0x02BC
-}; //Size: 0x02C0
-static_assert(sizeof(CNetGamePlayer) == 0x330);
+    char pad_3C8[8];
+};
+static_assert(sizeof(CNetGamePlayer) == 0x3D0);
 #pragma pack(pop)

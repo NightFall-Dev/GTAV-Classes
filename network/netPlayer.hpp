@@ -25,19 +25,22 @@ namespace rage
         virtual rage::rlGamerInfo* get_net_data();
         virtual void _0x70();
 
-        char pad_0008[8]; //0x0008
-        CNonPhysicalPlayerData* m_non_physical_player; //0x0010
-        uint32_t m_msg_id; //0x0018
-        char pad_001C[4]; //0x001C
-        uint8_t m_active_id; //0x0020
-        uint8_t m_player_id; //0x0021
-        char pad_0022[3]; //0x0022
-        uint16_t m_complaints; //0x0026
-        char pad_0027[17]; //0x0028
-        class CNetGamePlayer* m_unk_net_player_list[10]; //0x0040
-        char pad_0090[4]; //0x0090
-        uint64_t pad_0098; //0x0098
-    }; //Size: 0x00A0
-    static_assert(sizeof(netPlayer) == 0xA0);
+        int m_account_id; //0x0008 -- added b3504
+        int64_t m_rockstar_id; //0x0010 -- added b3504
+        char new_0018[0x90]; //0x0018 -- added b3504
+        uint32_t m_player_type; //0x00A8
+        CNonPhysicalPlayerData* m_non_physical_player; //0x00B0
+        uint32_t m_msg_id; //0x00B8
+        char pad_001C[4]; //0x00BC
+        uint8_t m_active_id; //0x00C0
+        uint8_t m_player_id; //0x00C1
+        char pad_0022[3]; //0x00C2
+        uint16_t m_complaints; //0x00C6
+        char pad_0027[17]; //0x00C8
+        class CNetGamePlayer* m_unk_net_player_list[10]; //0x00E0
+        char pad_0090[4]; //0x0130
+        uint64_t pad_0098; //0x0138
+    };
+    static_assert(sizeof(netPlayer) == 0x140);
 #pragma pack(pop)
 }
