@@ -41,8 +41,9 @@ struct SMPL_INTERIOR_DATA_SERVER
 	SCR_ARRAY<uint64_t, 32>             PlayerInteriorSimpleInteriorTypes;
 	SCR_ARRAY<uint64_t, 32>             PlayerInteriorIsOwnerless;
 	SCR_ARRAY<uint64_t, 32>             PlayerInteriorOwners;
+	SCR_INT                             TimeUpdated;
 };
-static_assert(sizeof(SMPL_INTERIOR_DATA_SERVER) == 234 * 8);
+static_assert(sizeof(SMPL_INTERIOR_DATA_SERVER) == 235 * 8);
 
 struct LEAVE_CLUBHOUSE_SERVER
 {
@@ -91,4 +92,4 @@ struct GSBD
 	uint64_t                            PAD_1399[97];
 	SCR_INT                             CayoPericoStrandedAnimalChoice;
 };
-static_assert(sizeof(GSBD) == 1498 * 8);
+static_assert(sizeof(GSBD) == 1499 * 8);

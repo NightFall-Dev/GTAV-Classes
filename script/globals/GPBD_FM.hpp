@@ -517,7 +517,6 @@ struct PROPERTY_DATA
 	SCR_ARRAY<FACTORY_INFO, 7>        FactoryInfos;
 	SCR_INT                           TotalBunkerResearch;
 	SCR_INT                           CurrentBunkerResearchProgress;
-	SCR_INT                           BunkerDecorVariation;
 	SCR_INT                           MOCBitset;
 	SCR_INT                           MOCColor; // bitset for some reason
 	uint64_t                          PAD_0290[2]; // unused
@@ -526,7 +525,7 @@ struct PROPERTY_DATA
 	SCR_INT                           PAD_0299;
 	DEFUNCT_BASE_DATA                 DefunctBaseData;
 	SCR_INT                           AvengerInteriorDecorFlags; // "PACKED_MP_INT_ARMORY_AIRCRAFT_INTERIOR_v0"
-	uint64_t                          PAD_0308[3];
+	uint64_t                          PAD_0308[2];
 	BUSINESS_HUB_DATA                 BusinessHubData;
 	NIGHTCLUB_DATA                    NightclubData;
 	SCR_INT                           PAD_0365;
@@ -570,7 +569,7 @@ struct PROPERTY_DATA
 	HACKER_DEN_DATA                   HackerDenData;
 	FIELD_HANGAR_DATA                 FieldHangarData;
 };
-static_assert(sizeof(PROPERTY_DATA) == 544 * 8);
+static_assert(sizeof(PROPERTY_DATA) == 542 * 8);
 
 struct BIKER_CONTRACTS
 {
@@ -628,7 +627,6 @@ struct GPBD_FM_Entry
 	SCR_INT                           TutorialBitset2;
 	TEXT_LABEL_23                     PlayingContentUsedId;
 	TEXT_LABEL_23                     MatchId;
-	uint64_t                          PAD_0156[8]; // unused
 	TEXT_LABEL_63                     DisplayJobName; // as shown in the playerlist?
 	STRIKE_TEAM                       StrikeTeam;
 	uint64_t                          PAD_0185[7]; // pad
@@ -676,14 +674,12 @@ struct GPBD_FM_Entry
 	uint64_t                          PAD_844;
 	SCR_INT                           SeatingIndex;
 	ARENA_WAR_DATA                    ArenaWarData;           // @858 as of 1.67
-	uint64_t                          PAD_0861[2];
 	SCR_INT                           ApartmentEnterFlags;
-	SCR_VEC3                          AvengerMissionStartPosition;
 };
-static_assert(sizeof(GPBD_FM_Entry) == 889 * 8);
+static_assert(sizeof(GPBD_FM_Entry) == 874 * 8);
 
 struct GPBD_FM
 {
 	SCR_ARRAY<GPBD_FM_Entry, 32> Entries;
 };
-static_assert(sizeof(GPBD_FM) == 28449 * 8);
+static_assert(sizeof(GPBD_FM) == 27969 * 8);
